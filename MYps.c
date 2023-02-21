@@ -18,19 +18,29 @@ int main(int argc, char const *argv[])
         char source[10000];
 
 
-
-        while ()
+// loop to print my processor and cache 
+        while (fgets(source, sizeof(source), cpuinfo))
         {
-
+            if (sscanf(source, "processor : %d", &processor) == 1) {
+                processor++;
+            } else if (sscanf(source, "cache size : %d", &cache) == 1) {
+                printf("Processor %d cache size: %d KB\n", processor, cache);
+            }
+        }
+        fclose(cpuinfo);
+    }
+     printf(" num of processors: %d\n", processor);
+     
+     return 0;
             
         }
         
 
 
-    }
+    
     
 
 
 
 
-}
+
