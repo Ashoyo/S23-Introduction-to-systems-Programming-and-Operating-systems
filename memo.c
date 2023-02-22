@@ -6,17 +6,19 @@
 int main(int argc, char const *argv[])
 {
     
-    int processor=0;
-    int cache = -1;
+   
+    int free=0;
+
+    int buffer=0;
 
     char *source = NULL;   
     size_t len = 0;
 
-    FILE *cpuinfo = fopen("/proc/cpuinfo", "r");
+    FILE *meminfo = fopen("/proc/meminfo", "r");
 
 // check for error 
 
-    if (cpuinfo == NULL) {
+    if (meminfo == NULL) {
         perror("fopen failed");
         return 1;
     }
@@ -24,19 +26,19 @@ int main(int argc, char const *argv[])
  
 
 // loop to print my processor and cache 
-        while (getline(&source, &len, cpuinfo)!=-1)
+        while (getline(&source, &len, meminfo)!=-1)
         {
-            if (sscanf(source, "processor : %d", &processor) == 1) {
-                processor++;
-            } else if (sscanf(source, "cache size : %d", &cache) == 1) {
-                printf("Processor %d cache size: %d KB\n", processor, cache);
+            if (sscanf(source, "free memory : %d", &free) == 1) {
+            } else if (sscanf(source, " buffer size : %d", &buffer) == 1) {
             }
         }
 
-        fclose(cpuinfo);
+        fclose(meminfo);
         free(source);
     
-     printf(" num of processors: %d\n", processor);
+     printf(" num of free mem: %ld KB\n", free);
+     printf("buff  size :%ld  KB\n",buffer);
+     
      
      return 0;
             
