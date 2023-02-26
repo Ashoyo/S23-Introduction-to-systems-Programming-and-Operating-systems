@@ -34,7 +34,7 @@ int main(int argc, char const *argv[])
             } else if (sscanf(source, " buffer size : %ld", &buffer) == 1) {
 
 
-                     printf("buff  size :%ld  KB\n",buffer);
+                printf("buff  size :%ld  KB\n",buffer);
 
 
             
