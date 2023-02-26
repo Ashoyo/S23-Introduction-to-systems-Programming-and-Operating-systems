@@ -39,7 +39,7 @@ int main(int argc, char const *argv[])
 
             
 
-             }
+            }
         }
 
         fclose(meminfo);
