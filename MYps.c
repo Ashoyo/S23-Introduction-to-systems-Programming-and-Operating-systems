@@ -1,49 +1,71 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "p.c"
+#include <getopt.h>
 
-
-
-
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-    
-    int processor=0;
-    int cache = -1;
+    int pid = -1;
+    int opt;
+    int s_flag = 0, U_flag = 0, S_flag = 0, v_flag = 0, c_flag = 0;
 
-    char *source = NULL;   
-    size_t len = 0;
-
-    FILE *cpuinfo = fopen("/proc/cpuinfo", "r");
-
-// check for error 
-
-    if (cpuinfo == NULL) {
-        perror("fopen failed");
-        return 1;
+    // Parse command line arguments using getopt()
+    while ((opt = getopt(argc, argv, "p:sUSvc")) != -1)
+    {
+        switch (opt)
+        {
+            case 'p':
+                pid = atoi(optarg);
+                break;
+            case 's':
+                s_flag = 1;
+                break;
+            case 'U':
+                U_flag = 1;
+                break;
+            case 'S':
+                S_flag = 1;
+                break;
+            case 'v':
+                v_flag = 1;
+                break;
+            case 'c':
+                c_flag = 1;
+                break;
+            default:
+                fprintf(stderr, "Usage: %s [-p <pid>] [-s] [-U] [-S] [-v] [-c]\n", argv[0]);
+                exit(0);
+        }
     }
 
- 
+    // Call   functions based on arg 
+    if (s_flag)
+    {
+        get_process_state();
+    }
 
-// loop to print my processor and cache 
-        while (getline(&source, &len, cpuinfo)!=-1)
-        {
-            if (sscanf(source, "processor : %d", &processor) == 1) {
-                processor++;
-            } else if (sscanf(source, "cache size : %d", &cache) == 1) {
-                printf("Processor %d cache size: %d KB\n", processor, cache);
-            }
-        }
+    if (U_flag)
+    {
+        get_process_Utime();
+    }
 
-        fclose(cpuinfo);
-        free(source);
-    
-     printf(" num of processors: %d\n", processor);
-     
-     return 0;
-            
+    if (S_flag)
+    {
+        get_process_stime();
+    }
+
+    if (v_flag)
+    {
+        get_virtualmemo();
+    }
+
+    if (c_flag)
+    {
+        get_configuration();
+    }
+
+    return 0;
 }
-        
+      
 
 
         
