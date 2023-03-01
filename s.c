@@ -9,7 +9,7 @@
 int main(void) {
 
 
-    pid_t pid = getpid(); 
+    int pid = getpid(); 
 
     char stat_file[1024];
 
