@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     int pid = -1;
     int opt;
-    int s_flag = 0, U_flag = 0, S_flag = 0, v_flag = 0, c_flag = 0;
+    int s_flag = 0, U_flag = 1, S_flag = 0, v_flag = 0, c_flag = 1;
 
     // Parse command line arguments using getopt()
     while ((opt = getopt(argc, argv, "p:sUSvc")) != -1)
