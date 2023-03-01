@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 
     if (c_flag)
     {
-        get_configuration();
+        void  get_configuration();
     }
 
     return 0;
