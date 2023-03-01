@@ -8,9 +8,14 @@
 
 int main(void) {
 
-    int ud= getuid();
+
     pid_t pid = getpid(); 
+    
     char stat_file[100];
+
+    // created path
+
+
     sprintf(stat_file, "/proc/%d/stat", pid); 
 
     FILE* fp = fopen(stat_file, "r");
@@ -20,6 +25,10 @@ int main(void) {
     }
 
     char state_var;
+
+
+    // get field  and spring formatter 
+
     if (fscanf(fp, "%*d %*s %c", &state_var) != 1) {
         perror("error");
         exit(0);
