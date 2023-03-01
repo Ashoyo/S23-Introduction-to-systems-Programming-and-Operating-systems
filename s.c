@@ -10,8 +10,8 @@ int main(void) {
 
 
     pid_t pid = getpid(); 
-    
-    char stat_file[100];
+
+    char stat_file[1024];
 
     // created path
 
