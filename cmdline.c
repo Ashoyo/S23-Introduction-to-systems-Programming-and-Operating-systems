@@ -6,6 +6,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <string.h>
 
 /* Prints the environment, one environment variable to a line, of the
 process given by PID. */
