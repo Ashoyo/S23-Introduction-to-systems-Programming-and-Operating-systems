@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
             
         char* utime=  get_process_Utime(pid);
 
-        printf("utime: %u \n", strtoul(utime, NULL, 10));
+        printf("utime: %lu \n", strtoul(utime, NULL, 10));
     }
 
 
