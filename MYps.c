@@ -1,12 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <getopt.h>
+#include <string.h>
+
 
 #include "s.c"
 
 int main(int argc, char *argv[])
 {
-    char pid[15];
+    char str_pid[15];
+    int pid=-1;
     int opt;
     int s_flag = 0, U_flag = 1, S_flag = 0, v_flag = 0, c_flag = 1;
 
@@ -16,7 +19,9 @@ int main(int argc, char *argv[])
         switch (opt)
         {
             case 'p':
-                strcpy(pid, optarg);
+                strcpy(str_pid, optarg);
+                int pid = atoi(str_pid);
+
                 break;
             case 's':
                 s_flag = 1;
@@ -40,7 +45,7 @@ int main(int argc, char *argv[])
     }
 
     // Call   functions based on arg 
-    if (s_flag)
+    if (s_flag && pid >= 0)
     {
         get_process_state(pid);
     }

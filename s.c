@@ -9,7 +9,6 @@
 char get_process_state(pid){
 
 
-    int pid = getpid(); 
 
     char stat_file[1024];
 
