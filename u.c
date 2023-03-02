@@ -4,7 +4,7 @@
 
 
 
- unsigned int get_process_Utime(pid){
+ unsigned int get_process_Utime(int pid){
 
 
 

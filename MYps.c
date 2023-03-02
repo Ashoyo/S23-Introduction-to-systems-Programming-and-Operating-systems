@@ -15,7 +15,7 @@
 
 
 char get_process_state(int pid);
-
+ unsigned int get_process_Utime(int pid);
 
 
 
@@ -82,6 +82,9 @@ int main(int argc, char *argv[])
 
 
     return 0;
+
+
+
 }
  
 
