@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
     // Call   functions based on arg 
     if (s_flag && pid >= 0)
     {
-        char get_process_state(pid);
+        char get_process_state(int pid );
     }
 
     return 0;
