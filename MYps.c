@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
     
    if (U_flag)
     {
-      char* utime=  get_process_Utime(pid);
+      unsigned int  utime=  get_process_Utime(pid);
 
       printf("utime: %s \n", utime);
     }

@@ -44,7 +44,7 @@
 
     // converts utime string to unsign int 
     
-  //  strtoul(utime, NULL, 10);
+ strtoul(utime, NULL, 10);
 
   return utime; 
 
