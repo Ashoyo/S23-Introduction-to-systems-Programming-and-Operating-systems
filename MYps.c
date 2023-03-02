@@ -69,6 +69,18 @@ int main(int argc, char *argv[])
 
     }
 
+
+
+    
+   if (U_flag)
+    {
+      char* utime=  get_process_Utime(pid);
+
+      printf("utime: %s \n", utime);
+    }
+
+
+
     return 0;
 }
  
@@ -77,12 +89,6 @@ int main(int argc, char *argv[])
 
 
 
-   if (U_flag)
-    {
-      unsigned int get_process_Utime(pid);
-
-      printf("utime: %s \n", utime);
-    }
 
   /*  if (S_flag)
     {
