@@ -15,7 +15,7 @@
 
 
 char get_process_state(int pid);
- unsigned int get_process_Utime(int pid);
+char* get_process_Utime(int pid);
 
 
 
@@ -74,9 +74,14 @@ int main(int argc, char *argv[])
     
    if (U_flag)
     {
-      unsigned int  utime=  get_process_Utime(pid);
 
-      printf("utime: %s \n", utime);
+
+            // converts utime string to unsign int 
+            
+            
+        char* utime=  get_process_Utime(pid);
+
+        printf("utime: %u \n", strtoul(utime, NULL, 10));
     }
 
 
