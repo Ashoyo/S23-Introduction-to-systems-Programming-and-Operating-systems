@@ -6,6 +6,16 @@
 
 #include "s.c"
 
+
+// declear 
+
+
+char get_process_state(int pid);
+
+
+
+
+
 int main(int argc, char *argv[])
 {
     char str_pid[15];
@@ -47,7 +57,7 @@ int main(int argc, char *argv[])
     // Call   functions based on arg 
     if (s_flag && pid >= 0)
     {
-        get_process_state(pid);
+        char get_process_state(int pid);
     }
 
     return 0;

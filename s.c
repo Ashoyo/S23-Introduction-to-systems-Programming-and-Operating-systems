@@ -6,7 +6,7 @@
 
 
 
-char get_process_state(pid){
+char get_process_state(int pid){
 
 
 
