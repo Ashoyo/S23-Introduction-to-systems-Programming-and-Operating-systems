@@ -4,7 +4,7 @@
 #include <string.h>
 
 
-#include "s.c"
+#include "s1.c"
 
 
 // declear 
@@ -57,7 +57,9 @@ int main(int argc, char *argv[])
     // Call   functions based on arg 
     if (s_flag)
     {
-        char get_process_state();
+        char state_var = get_process_state(pid);
+        printf("process state: %c\n", state_var);
+
     }
 
     return 0;
