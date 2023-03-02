@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
         {
             case 'p':
                 strcpy(str_pid, optarg);
-                int pid = atoi(str_pid);
+                pid = atoi(str_pid);
 
                 break;
             case 's':
