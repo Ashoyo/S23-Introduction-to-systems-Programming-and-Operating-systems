@@ -6,10 +6,10 @@
 
 
 
-char get_process_state(int pid){
+        char get_process_state(){
 
 
-
+    int pid = getpid();
     char stat_file[1024];
 
     // created path
