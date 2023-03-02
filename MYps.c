@@ -2,9 +2,11 @@
 #include <stdlib.h>
 #include <getopt.h>
 
+#include "s.c"
+
 int main(int argc, char *argv[])
 {
-    int pid = -1;
+    char pid[15];
     int opt;
     int s_flag = 0, U_flag = 1, S_flag = 0, v_flag = 0, c_flag = 1;
 
@@ -14,7 +16,7 @@ int main(int argc, char *argv[])
         switch (opt)
         {
             case 'p':
-                pid = atoi(optarg);
+                strcpy(pid, optarg);
                 break;
             case 's':
                 s_flag = 1;
@@ -40,10 +42,18 @@ int main(int argc, char *argv[])
     // Call   functions based on arg 
     if (s_flag)
     {
-        get_process_state();
+        get_process_state(pid);
     }
 
-    if (U_flag)
+    return 0;
+}
+ 
+
+
+
+
+
+  /*  if (U_flag)
     {
         get_process_Utime();
     }
@@ -62,10 +72,8 @@ int main(int argc, char *argv[])
     {
         void  get_configuration();
     }
-
-    return 0;
-}
-      
+*/
+     
 
 
         

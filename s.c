@@ -5,7 +5,8 @@
 
 
 
-int main(void) {
+
+char get_process_state(pid){
 
 
     int pid = getpid(); 
