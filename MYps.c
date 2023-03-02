@@ -5,6 +5,10 @@
 
 
 #include "s1.c"
+#include "u.c"
+
+
+
 
 
 // declear 
@@ -73,12 +77,14 @@ int main(int argc, char *argv[])
 
 
 
-  /*  if (U_flag)
+   if (U_flag)
     {
-        get_process_Utime();
+      unsigned int get_process_Utime(pid);
+
+      printf("utime: %s \n", utime);
     }
 
-    if (S_flag)
+  /*  if (S_flag)
     {
         get_process_stime();
     }
