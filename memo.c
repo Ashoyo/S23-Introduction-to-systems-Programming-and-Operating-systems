@@ -45,7 +45,7 @@ int main(int argc, char const *argv[])
         fclose(meminfo);
         free(source);
     
-        printf(" num of free mem: %ld KB\n", mem_free);
+        printf(" num of free mem: %d KB\n", mem_free);
 
      
      return 0;
