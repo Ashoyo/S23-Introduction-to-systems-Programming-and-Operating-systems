@@ -22,7 +22,7 @@ char get_process_state(int pid);
 char* get_process_Utime(int pid);
 char*  get_process_stime(int pid);
 unsigned long int get_virtualmemo(int pid);
- char*  get_configuration(int pid);
+char*  get_configuration(int pid);
 
 
 
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
     char str_pid[15];
     int pid=-1;
     int opt;
-    int s_flag = 0, U_flag = 1, S_flag = 0, v_flag = 0, c_flag = 1;
+    int s_flag = 0, U_flag = 1, S_flag = 0, v_flag = 0, c_flag = 0;
 
     // Parse command line arguments using getopt()
     while ((opt = getopt(argc, argv, "p:sUSvc")) != -1)
