@@ -47,8 +47,8 @@ char* get_virtualmemo(int pid){
     for (int i = 1; i <= position; i++) {
         
         fscanf(fp, "%s", vmeno);
-}
 
+    }
     fclose(fp);
 
     // converts utime string to unsign int 
