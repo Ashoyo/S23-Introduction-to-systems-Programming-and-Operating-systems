@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
     {
         
        char*  vmeno  = get_virtualmemo(pid);
-        printf("stime: %lu \n", strtoul(vmeno, NULL, 1000));
+        printf(" vmeno: %lu \n", strtoul(vmeno, NULL, 1000));
 
 
 
