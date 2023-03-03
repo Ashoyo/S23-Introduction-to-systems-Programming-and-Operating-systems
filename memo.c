@@ -29,8 +29,8 @@ int main(int argc, char const *argv[])
         while (getline(&source, &len, meminfo)!=-1)
         {
             if (sscanf(source, "free memory : %ld", &mem_free) == 1) {
-              printf(" num of free mem: %ld KB\n", mem_free);
 
+                mem_free++;
             } else if (sscanf(source, " buffer size : %ld", &buffer) == 1) {
 
 
@@ -45,6 +45,7 @@ int main(int argc, char const *argv[])
         fclose(meminfo);
         free(source);
     
+        printf(" num of free mem: %ld KB\n", mem_free);
 
      
      return 0;
