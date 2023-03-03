@@ -100,7 +100,7 @@ int main(int argc, char *argv[])
     if (v_flag)
     {
         
-        char*  get_virtualmemo(int pid);
+        char* vmeno =  get_virtualmemo(pid);
          printf("vmemo: %lu \n", strtoul(vmeno, NULL, 10));
 
 
