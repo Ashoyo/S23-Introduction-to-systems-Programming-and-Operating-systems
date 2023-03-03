@@ -15,7 +15,7 @@
 
 // coopy my utime code to mod,
 
-char*  get_virtualmemo(int pid){
+int  get_virtualmemo(int pid){
 
 
 

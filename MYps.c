@@ -21,7 +21,7 @@
 char get_process_state(int pid);
 char* get_process_Utime(int pid);
 char*  get_process_stime(int pid);
-char*  get_virtualmemo(int pid);
+int  get_virtualmemo(int pid);
 char*  get_configuration(int pid);
 
 
