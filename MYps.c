@@ -12,14 +12,12 @@
 
 
 
-
 // declear 
 
 
 char get_process_state(int pid);
 char* get_process_Utime(int pid);
-char*  get_process_stime(int pid)
-
+char*  get_process_stime(int pid);
 
 
 
@@ -108,8 +106,7 @@ int main(int argc, char *argv[])
 
 
 
-/**
-
+/*
     if (v_flag)
     {
         get_virtualmemo();
