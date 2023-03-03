@@ -24,7 +24,7 @@ int main(int argc, char const *argv[])
 
  
 
-// loop to print my processor and cache 
+// loop to print my processor and cache  make sscanf and calling the processor and cache to find in cpuionfo
         while (getline(&source, &len, cpuinfo)!=-1)
         {
             if (sscanf(source, "processor : %d", &processor) == 1) {
