@@ -14,7 +14,7 @@
 
 
 
-
+// for testing  propose-  ./a.out -p 12 -s -U -S -v -c
 
 // declear my functions 
 
