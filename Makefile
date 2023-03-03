@@ -1,10 +1,5 @@
-CC = gcc
-CFLAGS = -Wall -Werror
+  MYps: MYps.c 
+ 	  gcc -g  -o MYps MYps.c -Wall -Werror
 
-MYps: MYps.c
-	$(CC) $(CFLAGS) -o MYps MYps.c
-
-clean:
-	rm -f MYps
-
-all: MYps
+  clean: 
+	  $(RM) MYps
