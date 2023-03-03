@@ -15,7 +15,7 @@
 
 // coopy my utime code to mod, honest just the same code but changing the position to 15
 
- char*  get_virtualmemo(int pid){
+unsigned long int get_virtualmemo(int pid){
 
 
 
@@ -35,10 +35,8 @@
     
     
 
-    char*  vmeno = (char*) malloc(100 * sizeof(char));
-    
-    fscanf(fp, "%s", vmeno);
-
+    unsigned long int vmeno;
+    fscanf(fp, "%lu", &vmeno);
 
     fclose(fp);
 

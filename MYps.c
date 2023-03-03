@@ -19,7 +19,7 @@
 char get_process_state(int pid);
 char* get_process_Utime(int pid);
 char*  get_process_stime(int pid);
-char*  get_virtualmemo(int pid);
+unsigned long int get_virtualmemo(int pid);
 
 
 
@@ -100,9 +100,8 @@ int main(int argc, char *argv[])
     if (v_flag)
     {
         
-        char* vmeno =  get_virtualmemo(pid);
-        printf("vmemo: %s\n", vmeno);
-        free(vmeno);
+    unsigned long int vmeno = get_virtualmemo(pid);
+    printf("vmemo: %lu\n", vmeno);
 
 
 
