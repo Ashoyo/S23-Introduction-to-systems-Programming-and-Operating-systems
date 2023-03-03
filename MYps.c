@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
     {
         char* stime=  get_process_stime(pid);
 
-        printf("utime: %lu \n", strtoul(stime, NULL, 10));
+        printf("stime: %lu \n", strtoul(stime, NULL, 10));
 
     }
 
