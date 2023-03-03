@@ -103,8 +103,8 @@ int main(int argc, char *argv[])
     if (v_flag)
     {
         
-       char*  vmeno  = get_virtualmemo(pid);
-       printf("vmeno: %d \n", (int) strtol(vmeno, NULL, 10));
+       int vms  = get_virtualmemo(pid);
+       printf("vmeno: %d \n",vms );
 
 
 

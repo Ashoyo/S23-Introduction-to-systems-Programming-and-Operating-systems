@@ -15,7 +15,7 @@
 
 // coopy my utime code to mod,
 
-char* get_virtualmemo(int pid){
+char*  get_virtualmemo(int pid){
 
 
 
@@ -33,31 +33,14 @@ char* get_virtualmemo(int pid){
 
     }
     
-    
-// stores utime there, pointer bc char only store an single splace
 
-    char*  vmeno = (char*) malloc(100 * sizeof(char));
-
-// set to 14 bc the 14 is the postion in the state file for utime
-
-    int position = 1;
-    
-    
-    
-    for (int i = 1; i <= position; i++) {
-        
-        fscanf(fp, "%*d %d", vmeno);
-
-    }
+    int vms;
+    fscanf(fp, "%d", &vms);
     fclose(fp);
-
-    // converts utime string to unsign int 
     
-// strtoul(utime, NULL, 10);
-
-  return vmeno; 
 
 
+return vms;
 
 
 
