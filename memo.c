@@ -7,9 +7,9 @@ int main(int argc, char const *argv[])
 {
     
    
-    long mem_free=0;
+    int mem_free=0;
 
-    long buffer=0;
+    int buffer=0;
 
     char *source = NULL;   
     size_t len = 0;
@@ -28,13 +28,13 @@ int main(int argc, char const *argv[])
 // loop to print my buffer and memory free 
         while (getline(&source, &len, meminfo)!=-1)
         {
-            if (sscanf(source, "free memory : %ld", &mem_free) == 1) {
+            if (sscanf(source, "free memory : %d", &mem_free) == 1) {
 
                 mem_free++;
-            } else if (sscanf(source, " buffer size : %ld", &buffer) == 1) {
+            } else if (sscanf(source, " buffer size : %d", &buffer) == 1) {
 
 
-                printf("buff  size :%ld  KB\n",buffer);
+                printf("buff  size :%d  KB\n",buffer);
 
 
             
