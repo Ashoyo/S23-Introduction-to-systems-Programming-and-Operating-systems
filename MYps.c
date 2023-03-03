@@ -6,6 +6,8 @@
 
 #include "s1.c"
 #include "u.c"
+#include "Stime.c"
+
 
 
 
@@ -16,6 +18,7 @@
 
 char get_process_state(int pid);
 char* get_process_Utime(int pid);
+char*  get_process_stime(int pid)
 
 
 
@@ -85,6 +88,13 @@ int main(int argc, char *argv[])
     }
 
 
+    if (S_flag)
+    {
+        char* stime=  get_process_stime(pid);
+
+        printf("utime: %lu \n", strtoul(stime, NULL, 10));
+
+    }
 
     return 0;
 
@@ -98,10 +108,7 @@ int main(int argc, char *argv[])
 
 
 
-  /*  if (S_flag)
-    {
-        get_process_stime();
-    }
+/**
 
     if (v_flag)
     {
