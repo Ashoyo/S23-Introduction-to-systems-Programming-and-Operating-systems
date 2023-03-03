@@ -8,6 +8,8 @@
 #include "u.c"
 #include "Stime.c"
 #include "v.c"
+#include "c.c"
+
 
 
 
@@ -114,7 +116,7 @@ int main(int argc, char *argv[])
     if (c_flag)
     {
     char* cmdline = get_configuration(pid);
-    
+
     }    
 
     return 0;
