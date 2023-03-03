@@ -7,6 +7,7 @@
 #include "s1.c"
 #include "u.c"
 #include "Stime.c"
+#include "v.c"
 
 
 
@@ -18,6 +19,7 @@
 char get_process_state(int pid);
 char* get_process_Utime(int pid);
 char*  get_process_stime(int pid);
+char*  get_virtualmemo(int pid);
 
 
 
@@ -94,6 +96,17 @@ int main(int argc, char *argv[])
 
     }
 
+
+    if (v_flag)
+    {
+        
+        char*  get_virtualmemo(int pid);
+         printf("vmemo: %lu \n", strtoul(vmeno, NULL, 10));
+
+
+
+        }
+
     return 0;
 
 
@@ -107,10 +120,7 @@ int main(int argc, char *argv[])
 
 
 /*
-    if (v_flag)
-    {
-        get_virtualmemo();
-    }
+
 
     if (c_flag)
     {
