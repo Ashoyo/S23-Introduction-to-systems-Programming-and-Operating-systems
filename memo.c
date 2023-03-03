@@ -21,7 +21,11 @@ int main(int argc, char const *argv[])
 // get buffer and free 
     
     while (fgets(buffer, sizeof(buffer), fp)) {
-        if (sscanf(buffer, "MemFree: %lu kB", &mem_free) == 1) {
+
+
+        // check the /proc/meminfo for the names of what I need to get then just pass it in sscanf 
+
+        if (sscanf(buffer, "MemFreew: %lu kB", &mem_free) == 1) {
 
             printf(" memo : %lu kB\n", mem_free);
 
