@@ -33,7 +33,7 @@ int  get_virtualmemo(int pid){
 
     }
     
-
+// to set postiion to 1 and fscanf and close 
     int vms;
     fscanf(fp, "%d", &vms);
     fclose(fp);
