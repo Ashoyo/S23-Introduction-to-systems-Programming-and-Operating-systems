@@ -13,7 +13,7 @@
 #include <unistd.h>
 
 
-// coopy my utime code to mod, honest just the same code but changing the position to 15
+// coopy my utime code to mod,
 
 unsigned long int get_virtualmemo(int pid){
 
@@ -21,7 +21,7 @@ unsigned long int get_virtualmemo(int pid){
 
 // copy from my s.c file 
 
-    char stat_file[100];
+    char stat_file[1000000];
     sprintf(stat_file, "/proc/%d/statm", pid); 
 
     FILE* fp = fopen(stat_file, "r");

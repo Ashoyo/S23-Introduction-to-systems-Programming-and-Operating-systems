@@ -20,6 +20,7 @@ char get_process_state(int pid);
 char* get_process_Utime(int pid);
 char*  get_process_stime(int pid);
 unsigned long int get_virtualmemo(int pid);
+ char*  get_configuration(int pid);
 
 
 
@@ -107,6 +108,15 @@ int main(int argc, char *argv[])
 
         }
 
+
+
+    
+    if (c_flag)
+    {
+    char* cmdline = get_configuration(pid);
+    
+    }    
+
     return 0;
 
 
@@ -119,14 +129,7 @@ int main(int argc, char *argv[])
 
 
 
-/*
 
-
-    if (c_flag)
-    {
-        void  get_configuration();
-    }
-*/
      
 
 
