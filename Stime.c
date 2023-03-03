@@ -32,7 +32,7 @@
 
     char* stime = (char*) malloc(100 * sizeof(char));
 
-// set to 14 bc the 14 is the postion in the state file for utime
+// set to 15 bc the 15 is the postion in the state file for stime
 
     int position = 15;
     

@@ -34,20 +34,11 @@
     }
     
     
-// stores utime there, pointer bc char only store an single splace
 
     char*  vmeno = (char*) malloc(100 * sizeof(char));
+    
+    fscanf(fp, "%s", vmeno);
 
-// set to 14 bc the 14 is the postion in the state file for utime
-
-    int position = 1;
-    
-    
-    
-    for (int i = 1; i <= position; i++) {
-        
-        fscanf(fp, "%s", vmeno);
-}
 
     fclose(fp);
 
