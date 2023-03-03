@@ -1,5 +1,5 @@
-MYps: MYps.c
-    gcc MYps.c -o MYps -Wall -Werror
+  all: MYps.c 
+ 	  gcc -g -Wall -o MYps MYps.c -Wall -Werror
 
-clean:
-    rm -f MYps
+  clean: 
+	  $(RM) MYps
