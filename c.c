@@ -26,37 +26,29 @@
 
 
     }
-    
-    
-// stores utime there, pointer bc char only store an single splace
-
-    char* arg = (char*) malloc(100 * sizeof(char));
-     fgets(stat_file, 1000, fp);
+    //  read  entire contents of the /proc/cmdline file so i do that and put into buffer but we dont know the size so I malloc 
 
 
+    char* buffer = (char*) malloc(1000 * sizeof(char));
+    fgets(buffer,1000,fp);
+    fclose(fp);
 
 
-    int position = 0;
-    char* coutner  = strtok(arg, "\0");
 
-    while (coutner != NULL) {
-        position++;
-        coutner = strtok(NULL, "\0");
+    // solve the null issue here, for looping 
+
+    for (int i = 0; i < strlen(buffer); i++) {
+        if (buffer[i] == '\0') {
+            buffer[i] = ' ';
+        }
     }
 
-    // allocate memory for the output string
-    char* cmdline = (char*) malloc(position * sizeof(char));
-    strcpy(cmdline, arg);
+
+    return buffer;
+
+    
 
 
-
-
-
-
-
-    // free memory
-    free(arg);
-    fclose(fp);
 
 
 

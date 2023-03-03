@@ -4,6 +4,7 @@
 #include <string.h>
 
 
+// header 
 #include "s1.c"
 #include "u.c"
 #include "Stime.c"
@@ -15,7 +16,7 @@
 
 
 
-// declear 
+// declear my functions 
 
 
 char get_process_state(int pid);
@@ -33,7 +34,8 @@ int main(int argc, char *argv[])
     int opt;
     int s_flag = 0, U_flag = 1, S_flag = 0, v_flag = 0, c_flag = 0;
 
-    // Parse command line arguments using getopt()
+    // Parse command line arguments using getopt() 
+
     while ((opt = getopt(argc, argv, "p:sUSvc")) != -1)
     {
         switch (opt)
@@ -63,6 +65,11 @@ int main(int argc, char *argv[])
                 exit(0);
         }
     }
+
+
+
+
+
 
     // Call   functions based on arg 
     if (s_flag)
@@ -110,14 +117,28 @@ int main(int argc, char *argv[])
 
         }
 
-
-
     
     if (c_flag)
     {
-    char* cmdline = get_configuration(pid);
+
+    char*  buffer  = get_configuration(pid);
+     printf("%s\n", buffer);
+
+
 
     }    
+
+
+
+
+
+
+
+
+
+
+
+
 
     return 0;
 

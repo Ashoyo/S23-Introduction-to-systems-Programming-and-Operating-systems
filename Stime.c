@@ -37,6 +37,8 @@
     int position = 15;
     
     
+    // loops thru postions until its 15 
+
     
     for (int i = 1; i <= position; i++) {
         
@@ -47,9 +49,6 @@
 
 
 
-    // converts utime string to unsign int 
-    
-// strtoul(utime, NULL, 10);
 
   return stime; 
 
