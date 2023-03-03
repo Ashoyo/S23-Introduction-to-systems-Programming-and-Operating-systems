@@ -46,7 +46,7 @@ char* get_virtualmemo(int pid){
     
     for (int i = 1; i <= position; i++) {
         
-        fscanf(fp, "%s", vmeno);
+        fscanf(fp, "%*d %d", vmeno);
 
     }
     fclose(fp);
