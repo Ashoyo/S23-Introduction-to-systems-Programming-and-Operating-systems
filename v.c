@@ -34,8 +34,9 @@ unsigned long int get_virtualmemo(int pid){
     }
     
     
+// the size is show at 1 so  I set this to 1 
 
-    unsigned long int vmeno;
+    unsigned long int vmeno=1;
     fscanf(fp, "%lu", &vmeno);
 
     fclose(fp);
