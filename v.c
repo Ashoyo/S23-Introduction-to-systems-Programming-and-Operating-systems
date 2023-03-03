@@ -21,7 +21,7 @@ int  get_virtualmemo(int pid){
 
 // copy from my s.c file 
 
-    char stat_file[1000000];
+    char stat_file[256];
     sprintf(stat_file, "/proc/%d/statm", pid); 
 
     FILE* fp = fopen(stat_file, "r");
